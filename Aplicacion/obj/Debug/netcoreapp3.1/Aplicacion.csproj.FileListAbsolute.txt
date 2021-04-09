@@ -1,0 +1,14 @@
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\bin\Debug\netcoreapp3.1\Aplicacion.deps.json
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\bin\Debug\netcoreapp3.1\Aplicacion.dll
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\bin\Debug\netcoreapp3.1\Aplicacion.pdb
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\bin\Debug\netcoreapp3.1\Persistencia.dll
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\bin\Debug\netcoreapp3.1\Persistencia.pdb
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\obj\Debug\netcoreapp3.1\Aplicacion.csprojAssemblyReference.cache
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\obj\Debug\netcoreapp3.1\Aplicacion.AssemblyInfoInputs.cache
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\obj\Debug\netcoreapp3.1\Aplicacion.AssemblyInfo.cs
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\obj\Debug\netcoreapp3.1\Aplicacion.csproj.CoreCompileInputs.cache
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\obj\Debug\netcoreapp3.1\Aplicacion.csproj.CopyComplete
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\obj\Debug\netcoreapp3.1\Aplicacion.dll
+C:\Repository\StudentCoreNet\StudentCoreNet\Aplicacion\obj\Debug\netcoreapp3.1\Aplicacion.pdb
