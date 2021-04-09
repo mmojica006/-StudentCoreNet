@@ -1,9 +1,0 @@
-C:\Repository\StudentCoreNet\StudentCoreNet\Dominio\bin\Debug\netcoreapp3.1\Dominio.deps.json
-C:\Repository\StudentCoreNet\StudentCoreNet\Dominio\bin\Debug\netcoreapp3.1\Dominio.dll
-C:\Repository\StudentCoreNet\StudentCoreNet\Dominio\bin\Debug\netcoreapp3.1\Dominio.pdb
-C:\Repository\StudentCoreNet\StudentCoreNet\Dominio\obj\Debug\netcoreapp3.1\Dominio.csprojAssemblyReference.cache
-C:\Repository\StudentCoreNet\StudentCoreNet\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfoInputs.cache
-C:\Repository\StudentCoreNet\StudentCoreNet\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfo.cs
-C:\Repository\StudentCoreNet\StudentCoreNet\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.CoreCompileInputs.cache
-C:\Repository\StudentCoreNet\StudentCoreNet\Dominio\obj\Debug\netcoreapp3.1\Dominio.dll
-C:\Repository\StudentCoreNet\StudentCoreNet\Dominio\obj\Debug\netcoreapp3.1\Dominio.pdb
