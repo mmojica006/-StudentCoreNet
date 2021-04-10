@@ -8,8 +8,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Aplicacion.Empleados;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistencia;
+using Persistencia.Repository;
+using Persistencia.Repository.Interfaces;
 
 namespace Web
 {
@@ -30,7 +34,8 @@ namespace Web
                 Configuration.GetConnectionString("DefaultConnection")
                 )
             );
-
+            services.AddMediatR(typeof(Consulta.Manejador).Assembly);
+            services.AddScoped<IContenedorTrabajo, ContenedorTrabajo>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 

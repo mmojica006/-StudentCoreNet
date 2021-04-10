@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Persistencia.Repository.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
-using Persistencia.Repository.Interfaces;
+using System.Threading.Tasks;
 
 namespace Persistencia.Repository
 {
@@ -12,24 +12,24 @@ namespace Persistencia.Repository
     {
         protected readonly DbContext Context;
         internal DbSet<T> dbSet;
+
         public Repository(DbContext context)
         {
             Context = context;
             this.dbSet = context.Set<T>();
-
         }
 
-        public void Add(T entity)
+        public async Task AddAsyncTask(T entity)
         {
-            dbSet.Add(entity);
+            await dbSet.AddAsync(entity);
         }
 
-        public T Get(int id)
+        public async Task<T> GetAsyncTask(int id)
         {
-            return dbSet.Find(id);
+            return await dbSet.FindAsync(id);
         }
 
-        public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = null)
+        public async Task<IEnumerable<T>> GetAllAsyTask(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = null)
         {
             IQueryable<T> query = dbSet;
 
@@ -52,10 +52,10 @@ namespace Persistencia.Repository
                 return orderBy(query).ToList();
             }
 
-            return query.ToList();
+            return await query.ToListAsync();
         }
 
-        public T GetFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
+        public Task<T> GetFirstOrDefaultAsyncTask(Expression<Func<T, bool>> filter = null, string includeProperties = null)
         {
             IQueryable<T> query = dbSet;
 
@@ -73,12 +73,12 @@ namespace Persistencia.Repository
                 }
             }
 
-            return query.FirstOrDefault();
+            return query.FirstOrDefaultAsync();
         }
 
-        public void Remove(int id)
+        public async Task RemoveAsyncTask(int id)
         {
-            T entityToRemove = dbSet.Find(id);
+            T entityToRemove = await dbSet.FindAsync(id);
             Remove(entityToRemove);
         }
 

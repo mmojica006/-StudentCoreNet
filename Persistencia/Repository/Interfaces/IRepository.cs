@@ -2,25 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace Persistencia.Repository.Interfaces
 {
     public interface IRepository<T> where T : class
     {
-        T Get(int id);
-        IEnumerable<T> GetAll(
+        Task<T> GetAsyncTask(int id);
+        Task<IEnumerable<T>> GetAllAsyTask(
             Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             string includeProperties = null
         );
 
-        T GetFirstOrDefault(
+        Task<T> GetFirstOrDefaultAsyncTask(
             Expression<Func<T, bool>> filter = null,
             string includeProperties = null
         );
 
-        void Add(T entity);
-        void Remove(int id);
+        Task AddAsyncTask(T entity);
+        Task RemoveAsyncTask(int id);
         void Remove(T entity);
     }
 }
