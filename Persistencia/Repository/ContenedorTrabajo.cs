@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Persistencia.Repository.Interfaces;
+﻿using Persistencia.Repository.Interfaces;
+using System.Threading.Tasks;
 
 namespace Persistencia.Repository
 {
@@ -15,15 +13,15 @@ namespace Persistencia.Repository
             _db = db;
             Empleado = new EmpleadoRepository(_db);
         }
+
         public void Dispose()
         {
             _db.Dispose();
         }
 
-       
-        public void Save()
+        public void SaveAsycTask()
         {
-            _db.SaveChanges();
+              _db.SaveChangesAsync();
         }
     }
 }
