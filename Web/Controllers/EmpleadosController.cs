@@ -21,10 +21,18 @@ namespace Web.Controllers
             var result = await _mediator.Send(new Consulta.ListaEmpleados());
             return View(result);
         }
+        [HttpGet]
+        public IActionResult Create()
+        {
+            var genero = _mediator.Send(new ObtenerGenero.Consulta()).Result;
+            ViewBag.GenerosEnum = genero;
+
+            return View();
+        }
 
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public  IActionResult GetAll()
         {
             
             return Json(new { data = _mediator.Send(new Consulta.ListaEmpleados()).Result });

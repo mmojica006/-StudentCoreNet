@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Utilidades;
 
 namespace Persistencia.Repository.Interfaces
 {
@@ -11,5 +12,7 @@ namespace Persistencia.Repository.Interfaces
 
         Task UpdateAsyncTask(Empleado empleado
         );
+
+        List<ConvertEnum> ObtenerGenero();
     }
 }
