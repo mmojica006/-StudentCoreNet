@@ -20,15 +20,15 @@ function cargarDataTable() {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
-                            <a href='/Admin/Categorias/Edit/${data}' class='btn btn-success text-white' style='cursor:pointer; width:100px;'>
-                            <i class='fas fa-edit'></i> Editar
+                            <a href='/Admin/Categorias/Edit/${data}' class='btn btn-success text-white' style='cursor:pointer; width:40px;'>
+                            <i class='fas fa-edit'></i> 
                             </a>
                             &nbsp;
-                            <a onclick=Delete("/Admin/Categorias/Delete/${data}") class='btn btn-danger text-white' style='cursor:pointer; width:100px;'>
-                            <i class='fas fa-trash-alt'></i> Borrar
+                            <a onclick=Delete("/Admin/Categorias/Delete/${data}") class='btn btn-danger text-white' style='cursor:pointer; width:40px;'>
+                            <i class='fas fa-trash-alt'></i> 
                             </a>
                             `;
-                }, "width": "30%"
+                }, "width": "10%"
             }
         ],
         "language": {

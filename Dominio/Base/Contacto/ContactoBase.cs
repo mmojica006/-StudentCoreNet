@@ -9,6 +9,8 @@ namespace Dominio.Base.Contacto
 
         public virtual string PrimerNombre { get; set; }
         public virtual string SegundoNombre { get; set; }
+        public virtual string PrimerApellido { get; set; }
+        public virtual string SegundoApellido { get; set; }
         public virtual string  Telefono { get; set; }
         public virtual Genero Genero { get; set; }
 

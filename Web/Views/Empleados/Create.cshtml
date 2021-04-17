@@ -29,15 +29,62 @@
                     <span asp-validation-for="SegundoNombre" class="text-danger"></span>
                 </div>
             </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="PrimerApellido"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="PrimerApellido" class="form-control" />
+                    <span asp-validation-for="PrimerApellido" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="SegundoApellido"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="SegundoApellido" class="form-control" />
+                    <span asp-validation-for="SegundoApellido" class="text-danger"></span>
+                </div>
+            </div>
+
             <div class="form-group row">
                 <div class="col-4">
                     <label asp-for="Genero"></label>
                 </div>
                 <div class="col-8">
-                 @Html.DropDownList("Generos", new SelectList(ViewBag.GenerosEnum,"Value","Text"),new { @class ="form-control" })
+                    @Html.DropDownList("Genero", new SelectList(ViewBag.GenerosEnum, "Value", "Text"), new { @class = "form-control" })
                 </div>
             </div>
-
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Telefono"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Telefono" class="form-control" />
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Cedula"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Cedula" class="form-control" />
+                    <span asp-validation-for="Cedula" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="FechaNacimiento"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="FechaNacimiento" class="form-control" />
+                    <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+                </div>
+            </div>
             <div class="form-group row">
                 <div class="col-8 offset-4">
                     <partial name="_VistaCrearVolver" />

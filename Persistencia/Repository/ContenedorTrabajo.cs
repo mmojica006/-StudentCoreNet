@@ -19,9 +19,9 @@ namespace Persistencia.Repository
             _db.Dispose();
         }
 
-        public void SaveAsycTask()
+        public async Task<int> SaveAsynTask()
         {
-              _db.SaveChangesAsync();
+              return await  _db.SaveChangesAsync();
         }
     }
 }

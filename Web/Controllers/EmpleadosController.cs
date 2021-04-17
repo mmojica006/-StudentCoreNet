@@ -4,6 +4,7 @@ using Aplicacion.Empleados;
 using Dominio;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Web.Controllers
 {
@@ -27,6 +28,19 @@ namespace Web.Controllers
             var genero = _mediator.Send(new ObtenerGenero.Consulta()).Result;
             ViewBag.GenerosEnum = genero;
 
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] 
+        public async Task<IActionResult> Create(Nuevo.Ejecuta model)
+        {
+            if (ModelState.IsValid)
+            {
+                await  _mediator.Send(model);
+                return RedirectToAction(nameof(Index));
+            }
+           
             return View();
         }
 

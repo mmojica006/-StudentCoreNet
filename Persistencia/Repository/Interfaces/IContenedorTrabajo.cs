@@ -8,6 +8,6 @@ namespace Persistencia.Repository.Interfaces
     public interface IContenedorTrabajo:IDisposable
     {
         IEmpleadoRepository Empleado { get; }
-        void SaveAsycTask();
+        Task<int> SaveAsynTask();
     }
 }

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Aplicacion.Empleados;
+using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistencia;
@@ -37,6 +38,10 @@ namespace Web
             services.AddMediatR(typeof(Consulta.Manejador).Assembly);
             services.AddScoped<IContenedorTrabajo, ContenedorTrabajo>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+            services.AddMvc()
+                .AddFluentValidation(fvc =>
+                    fvc.RegisterValidatorsFromAssemblyContaining<Startup>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
